@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Input Popup",
+  "version": "1.0.0",
+  "description": "A MetaMask-style popup that lets you enter and save text.",
+  "action": {
+    "default_title": "Quick Input",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"]
+}

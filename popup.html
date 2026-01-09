@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quick Input</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="panel">
+      <header class="panel__header">
+        <div class="panel__badge">Q</div>
+        <div>
+          <p class="panel__title">快速输入</p>
+          <p class="panel__subtitle">像 MetaMask 一样的小弹窗</p>
+        </div>
+      </header>
+
+      <label class="field">
+        <span>输入内容</span>
+        <input id="inputField" type="text" placeholder="在这里输入" />
+      </label>
+
+      <button id="saveButton" class="primary" type="button">保存</button>
+
+      <div class="status">
+        <p class="status__label">已保存</p>
+        <p id="savedValue" class="status__value">暂无</p>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
