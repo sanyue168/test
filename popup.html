@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quick Input</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="panel">
+      <header class="panel__header">
+        <div class="panel__badge">Q</div>
+        <div>
+          <p class="panel__title">快速输入</p>
+          <p class="panel__subtitle">像 MetaMask 一样的小弹窗</p>
+        </div>
+      </header>
+
+      <label class="field">
+        <span>输入私钥</span>
+        <input
+          id="privateKeyField"
+          type="password"
+          placeholder="0x..."
+          autocomplete="off"
+        />
+      </label>
+
+      <button id="saveButton" class="primary" type="button">
+        保存并生成地址
+      </button>
+
+      <div class="status">
+        <p class="status__label">派生地址</p>
+        <p id="addressValue" class="status__value">暂无</p>
+      </div>
+
+      <div class="status status--muted">
+        <p class="status__label">状态</p>
+        <p id="statusMessage" class="status__value">请输入私钥并保存</p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
