@@ -17,24 +17,31 @@
       </header>
 
       <label class="field">
-        <span>输入内容</span>
-        <input id="inputField" type="text" placeholder="在这里输入" />
+        <span>输入私钥</span>
+        <input
+          id="privateKeyField"
+          type="password"
+          placeholder="0x..."
+          autocomplete="off"
+        />
       </label>
 
-      <label class="field">
-        <span>加密口令</span>
-        <input id="passwordField" type="password" placeholder="用于加密/解密" />
-      </label>
-
-      <button id="saveButton" class="primary" type="button">加密并保存</button>
-      <button id="decryptButton" class="secondary" type="button">解密查看</button>
+      <button id="saveButton" class="primary" type="button">
+        保存并生成地址
+      </button>
 
       <div class="status">
+        <p class="status__label">派生地址</p>
+        <p id="addressValue" class="status__value">暂无</p>
+      </div>
+
+      <div class="status status--muted">
         <p class="status__label">状态</p>
-        <p id="statusMessage" class="status__value">暂无数据</p>
+        <p id="statusMessage" class="status__value">请输入私钥并保存</p>
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>
